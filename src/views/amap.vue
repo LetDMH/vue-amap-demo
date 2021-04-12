@@ -109,7 +109,7 @@ export default {
             this.selectedAdd = province + city + district + address
             this.selectedData.province = province
             this.selectedData.city = city || province // 直辖市或特别行政区这一栏为空，用省份代替
-            this.selectedData.district = district || this.$t('base.cityArea') // 部分城市没有辖区或辖县，统一以市辖区替代
+            this.selectedData.district = district
             this.selectedData.address = address
             console.log(addressComponent,marker)
             console.log(this.selectedAdd,this.selectedData)
