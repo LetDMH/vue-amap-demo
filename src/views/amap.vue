@@ -30,7 +30,6 @@ export default {
                     resizeEnable: true,
                     zoom: 13
                 })
-                this.infoWindow = new AMap.InfoWindow({offset: new AMap.Pixel(0, -30)})
                 this.map.plugin('AMap.Geolocation',()=>{
                     const geolocation = new AMap.Geolocation({
                         // 是否使用高精度定位，默认:true
@@ -58,7 +57,7 @@ export default {
             let lnglatXY = [x, y]
             this.regeocoder(lnglatXY)
         },
-            // 解析定位结果
+        // 解析定位结果
         onComplete (data) {
             this.map.setZoom(13)
             let x = data.position.lng
